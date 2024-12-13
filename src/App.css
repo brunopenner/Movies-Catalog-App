@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+
+/*  */
+section {
+  display: flex;
+}
+
+section > div {
+  width: 50%
+}
