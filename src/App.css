@@ -50,3 +50,9 @@ section {
 section > div {
   width: 50%
 }
+
+section.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
