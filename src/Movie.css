@@ -1,6 +1,6 @@
 .Movie {
     display: flex;
-    height: 80px;
+    height: 60px;
     padding: 20px;
     gap: 20px;
     background-color: #1f1f1f;
@@ -16,4 +16,9 @@
 
 .Movie .movieContent h2 {
     font-size: 16px;
+    margin: 0;
+}
+
+.Movie .movieContent p {
+    margin: 0
 }
