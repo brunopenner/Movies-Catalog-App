@@ -48,11 +48,13 @@ section {
 }
 
 section > div {
-  width: 50%
+  width: 49%;
 }
 
 section.wrapper {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
+  display: flex;
+  gap: 0 2%;
 }

@@ -4,18 +4,22 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './Navbar'
 import ListMovies from './ListMovies'
+import MovieInternal from './MovieInternal'
 
 function App() {
+  const testFunction = () => {
+    console.log("Test function!");
+  }
 
   return (
     <>
       <Navbar />
       <section className='wrapper'>
         <div className='leftColumn'>
-          <ListMovies />
+          <ListMovies testFunction={testFunction}/>
         </div>
         <div className='rightColumn'>
-          rightColumn
+          <MovieInternal />
         </div>
       </section>
     </>

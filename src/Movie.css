@@ -3,7 +3,7 @@
     height: 60px;
     padding: 20px;
     gap: 20px;
-    background-color: #1f1f1f;
+    background-color: #303030;
 }
 
 .Movie:not(:last-child) {
