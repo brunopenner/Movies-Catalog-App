@@ -1,12 +1,12 @@
 import "./Movie.css"
 
-export default function Movie ({movie, testFunction}) {
+export default function Movie ({poster, year, title, testFunction}) {
     return (
         <div className="Movie">
-            <img src={movie.Poster} alt={movie.Title} />
+            <img src={poster} alt={title} />
             <div className="movieContent">
-                <h2 onClick={testFunction} style={{cursor: "pointer"}}>{movie.Title}</h2>
-                <p>📅 {movie.Year}</p>
+                <h2 onClick={() => testFunction({title})} style={{cursor: "pointer"}}>{title}</h2>
+                <p>📅 {year}</p>
             </div>
         </div>
     )

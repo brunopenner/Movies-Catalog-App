@@ -2,20 +2,24 @@ import { useEffect, useState } from "react";
 import "./MovieInternal.css"
 import MovieRating from "./MovieRating";
 
-const MOVIE_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=bd0cf6aa&t=The+avengers"
 
-export default function MovieInternal () {
+
+export default function MovieInternal ({movieTitle}) {
+    console.log("Movie Title variable: ",movieTitle)
     const [movie, setMovie] = useState([])
     
     useEffect (() => {
-        fetchMovie();
-    }, [])
+        console.log("1 - Movie Title: ", movieTitle)
+        const MOVIE_URL = `http://www.omdbapi.com/?i=tt3896198&apikey=bd0cf6aa&t=${movieTitle.title}`
+        console.log("2 - Movie URL: ", MOVIE_URL)
+        fetchMovie(MOVIE_URL);
+    }, [movieTitle])
 
-    async function fetchMovie() {
-        const response = await fetch(MOVIE_URL);
+    async function fetchMovie(url) {
+        const response = await fetch(url);
         const data = await response.json();
         setMovie (data);
-        console.log("Movie Internal: ", movie)
+        // console.log("Movie Internal: ", movie)
     }
 
     return (
