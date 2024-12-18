@@ -8,7 +8,6 @@ export default function MovieRating () {
 
     const renderStars = () => {
         const stars = []
-        let hasRating = false;
         for (let i=1; i<=10; i++) {
             stars.push(
                 <span key={i} className="star"
@@ -24,8 +23,10 @@ export default function MovieRating () {
     }
     return (
         <div className="movieRating">
-            {renderStars()}
-            {starRating > 0 ? "Button here" : ""}
+            <div className="stars">
+                {renderStars()} {starRating}
+            </div>
+            {starRating > 0 ? <button>+Add to list</button> : ""}
         </div>
     )
 }

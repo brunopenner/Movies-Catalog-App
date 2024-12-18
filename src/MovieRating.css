@@ -1,3 +1,23 @@
-.movieRating * {
-    color: rgb(255, 208, 0)
+.movieRating {
+    background-color: #414141;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
+
+.movieRating .stars {
+    color: rgb(255, 208, 0);
+}
+
+.movieRating .stars * {
+    cursor: pointer;
+}
+
+.movieRating button {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 50px;
+    background-color: rgb(98, 75, 247);
+    color: white
+}
+
