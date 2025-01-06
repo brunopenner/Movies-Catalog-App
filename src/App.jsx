@@ -29,6 +29,8 @@ function App() {
   return (
     <>
       <Navbar />
+      <p>First 2025 commit!</p>
+      <p>May this be a blessed and wonderful year for all!</p>
       <section className='wrapper'>
         <div className='leftColumn'>
           <ListMovies movies={movies} testFunction={testFunction}/>
